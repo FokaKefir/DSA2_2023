@@ -1,4 +1,4 @@
-#ifndef DSA2_RECURSION_H
+#ifndef DSA2_FUNCTIONS_H
 #define DSA2_RECURSION_H
 
 using namespace std;
@@ -98,4 +98,4 @@ void printDigitsOfNumberReverse(int n);
 */
 float averageDigitsOfNumber(int n, int numberOfDigits, int sum);
 
-#endif //DSA2_RECURSION_H
+#endif //DSA2_FUNCTIONS_H

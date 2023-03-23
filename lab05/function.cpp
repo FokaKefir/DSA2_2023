@@ -41,8 +41,8 @@ vector<int> bfs_vector(vector <Point> &points, int startingPoint) {
                     queue.push(points.at(u).neighbors.at(i));
                 }
             }
-            queue.pop();
             points.at(u).color = 2;
+            queue.pop();
     }
     return bfs;
 }
