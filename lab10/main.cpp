@@ -4,6 +4,7 @@ using namespace std;
 
 /**
  * 102/322988
+ * https://gm.canvas2.cs.ubbcluj.ro/index.php?pageType=login
  */
 
 /* file.in
