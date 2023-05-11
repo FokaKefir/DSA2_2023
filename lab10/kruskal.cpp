@@ -1,5 +1,5 @@
 #include <algorithm>
-#include "greedy.h"
+#include "kruskal.h"
 
 int n = 0;
 

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "greedy.h"
+#include "kruskal.h"
 using namespace std;
 
 /**
