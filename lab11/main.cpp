@@ -1,4 +1,3 @@
-#include <iostream>
 #include "greedy.h"
 
 using namespace std;
@@ -15,6 +14,13 @@ void task2() {
     greedyBanknotes(banknotes);
 }
 
+void task3() {
+    vector<Film> films = readFilmsFromFile("program.txt");
+    //printFilms(films);
+    vector<Film> pFilms = generateProgram(films);
+    printFilms(pFilms);
+}
+
 int main() {
-    task2();
+    task3();
 }

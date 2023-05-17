@@ -93,3 +93,56 @@ void greedyBanknotes(vector<int> banknotes) {
     }
     cout << endl;
 }
+
+vector<Film> readFilmsFromFile(char *filename) {
+    ifstream fin(filename);
+    if (!fin) {
+        cout << "File open error!\n";
+        exit(EXIT_FAILURE);
+    }
+
+    int n;
+    fin >> n;
+
+    vector<Film> films;
+    string title;
+    string tmp;
+    int start, end;
+    for (int i = 0; i < n; i++) {
+        getline(fin, tmp);
+        getline(fin, title);
+        fin >> start >> end;
+        Film film = {title, start, end};
+        films.push_back(film);
+    }
+
+    return films;
+}
+
+void printFilms(vector<Film> films) {
+    for (Film film : films) {
+        cout << film.title << " " << film.start << " - " << film.end << endl;
+    }
+    cout << endl;
+}
+
+vector<Film> generateProgram(vector<Film> films) {
+    sort(films.begin(), films.end(), [](const Film &f1, const Film &f2) {
+        return f1.end < f2.end;
+    });
+
+    vector<Film> pFilms;
+    int finish = 0;
+    for (Film film : films) {
+        if (finish <= film.start) {
+            pFilms.push_back(film);
+            finish = film.end;
+        }
+        if (finish == 24)
+            break;
+    }
+
+    return pFilms;
+}
+
+
